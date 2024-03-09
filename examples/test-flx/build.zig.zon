@@ -3,13 +3,9 @@
     .version = "0.0.0",
 
     .dependencies = .{
-        .@flx = .{
-            .url = "https://github.com/jcs090218/zig-flx/archive/8b631a8fa98d000e2932208ca127bdafc2ca9681.tar.gz",
-            .hash = "1220018d65a2105db410846019d23fd9966ace9f5cacc2fdec5c1ad4275009b94b70",
-        },
-        .chameleon = .{
-            .url = "https://github.com/tr1ckydev/chameleon/archive/3d7fdd61598edecacd2c53c5ecff76a79abb8661.tar.gz",
-            .hash = "1220018d65a2105db410846019d23fd9966ace9f5cacc2fdec5c1ad4275009b94b70",
+        .flx = .{
+            .url = "https://github.com/jcs090218/zig-flx/archive/04a1a9c4ec68ca41542e0b89af742f0d448affd4.tar.gz",
+            .hash = "1220337a24d3dcb5420693aa4245a6da4cc09ec8066b162c6e19ec92e43057066839",
         },
     },
 }

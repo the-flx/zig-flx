@@ -3,14 +3,26 @@ const std = @import("std");
 const CFlags = &.{};
 
 fn declare_module(b: *std.Build) void {
-    _ = b.addModule("flx", .{
+    const module = b.addModule("flx", .{
         .source_file = .{ .path = "src/flx.zig" },
     });
+    module.addIncludePath(.{ .path = "c-lib/flx-c/include/" });
+    module.addCSourceFile(.{
+        .file = .{
+            .path = "src/stb_ds.c", // single-file header
+        },
+        .flags = CFlags,
+    });
+    module.addCSourceFile(.{
+        .file = .{
+            .path = "c-lib/flx-c/src/flx.c",
+        },
+        .flags = CFlags,
+    });
+    module.linkLibC();
 }
 
-pub fn build(b: *std.Build) void {
-    declare_module(b);
-
+fn rest(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
     const lib = b.addStaticLibrary(.{
@@ -22,7 +34,7 @@ pub fn build(b: *std.Build) void {
     lib.addIncludePath(.{ .path = "c-lib/flx-c/include/" });
     lib.addCSourceFile(.{
         .file = .{
-            .path = "src/stb_ds.c",  // single-file header
+            .path = "src/stb_ds.c", // single-file header
         },
         .flags = CFlags,
     });
@@ -44,7 +56,7 @@ pub fn build(b: *std.Build) void {
     main_tests.addIncludePath(.{ .path = "c-lib/flx-c/include/" });
     main_tests.addCSourceFile(.{
         .file = .{
-            .path = "src/stb_ds.c",  // single-file header
+            .path = "src/stb_ds.c", // single-file header
         },
         .flags = CFlags,
     });
@@ -60,4 +72,9 @@ pub fn build(b: *std.Build) void {
 
     const test_step = b.step("test", "Run library tests");
     test_step.dependOn(&run_main_tests.step);
+}
+
+pub fn build(b: *std.Build) void {
+    declare_module(b);
+    rest(b);
 }

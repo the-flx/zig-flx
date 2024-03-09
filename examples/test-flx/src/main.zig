@@ -1,13 +1,9 @@
 const std = @import("std");
 const flx = @import("flx");
-const Chameleon = @import("chameleon").Chameleon;
 
 pub fn main() !void {
-    comptime var cham = Chameleon.init(.Auto);
-    std.debug.print(cham.green().fmt("Hello, world!"), .{});
-
-    //const result = flx.score("switch-to-buffer", "stb");
-    //std.debug.print("hello {s}", .{result.*.score});
+    const result = flx.score("switch-to-buffer", "stb");
+    std.debug.print("hello {s}", .{result.*.score});
 }
 
 test "simple test" {

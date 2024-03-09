@@ -13,12 +13,6 @@ pub fn build(b: *std.Build) void {
     });
 
     {
-        const cham_dep = b.dependency("chameleon", .{});
-        const cham_mod = cham_dep.module("chameleon");
-        exe.addModule("chameleon", cham_mod);
-    }
-
-    {
         const flx_dep = b.dependency("flx", .{});
         const flx_mod = flx_dep.module("flx");
         exe.addModule("flx", flx_mod);
