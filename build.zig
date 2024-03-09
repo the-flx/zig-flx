@@ -4,7 +4,7 @@ const CFlags = &.{};
 
 fn declare_module(b: *std.Build) void {
     const module = b.addModule("flx", .{
-        .source_file = .{ .path = "src/flx.zig" },
+        .root_source_file = .{ .path = "src/flx.zig" },
     });
     module.addIncludePath(.{ .path = "c-lib/flx-c/include/" });
     module.addCSourceFile(.{
@@ -19,7 +19,6 @@ fn declare_module(b: *std.Build) void {
         },
         .flags = CFlags,
     });
-    module.linkLibC();
 }
 
 fn rest(b: *std.Build) void {

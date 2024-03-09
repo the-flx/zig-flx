@@ -2,6 +2,12 @@
     .name = "test-flx",
     .version = "0.0.0",
 
+    .paths = .{
+        "src",
+        "build.zig",
+        "build.zig.zon",
+    },
+
     .dependencies = .{
         .flx = .{
             .url = "https://github.com/jcs090218/zig-flx/archive/04a1a9c4ec68ca41542e0b89af742f0d448affd4.tar.gz",
