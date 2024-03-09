@@ -1,12 +1,4 @@
 .{
     .name = "flx",
     .version = "0.1.0",
-
-    .dependencies = .{},
-
-    .paths = .{
-        "src",
-        "build.zig",
-        "build.zig.zon",
-    },
 }
