@@ -4,6 +4,8 @@
 # zig-flx
 > Zig bindings for flx-c
 
+[![CI](https://github.com/jcs090218/zig-flx/actions/workflows/test.yml/badge.svg)](https://github.com/jcs090218/zig-flx/actions/workflows/test.yml)
+
 ## 🔧 Usage
 
 ```zig
