@@ -1,5 +1,5 @@
 .{
-    .name = "zig-flx",
+    .name = "flx",
     .version = "0.1.0",
 
     .dependencies = .{},
