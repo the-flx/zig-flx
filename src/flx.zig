@@ -9,7 +9,7 @@ const c = @cImport({
 pub const Result = [*c]c.flx_result;
 const c_string = [*c]const u8;
 
-export fn score(str: c_string, query: c_string) Result {
+pub export fn score(str: c_string, query: c_string) Result {
     return c.flx_score(str, query);
 }
 
