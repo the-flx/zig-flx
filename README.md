@@ -16,7 +16,7 @@ pub fn main() !void {
 }
 ```
 
-## Installation
+## 💾 Installation
 
 1. Add the dependency to the `build.zig.zon` of your project.
 
