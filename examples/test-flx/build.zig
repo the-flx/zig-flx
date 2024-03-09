@@ -12,10 +12,11 @@ pub fn build(b: *std.Build) void {
         .optimize = optimize,
     });
 
+    exe.linkLibC();
     {
         const flx_dep = b.dependency("flx", .{});
         const flx_mod = flx_dep.module("flx");
-        exe.addModule("flx", flx_mod);
+        exe.root_module.addImport("flx", flx_mod);
     }
 
     b.installArtifact(exe);

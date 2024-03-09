@@ -3,12 +3,5 @@ const flx = @import("flx");
 
 pub fn main() !void {
     const result = flx.score("switch-to-buffer", "stb");
-    std.debug.print("hello {s}", .{result.*.score});
-}
-
-test "simple test" {
-    var list = std.ArrayList(i32).init(std.testing.allocator);
-    defer list.deinit(); // try commenting this out and see if zig detects the memory leak!
-    try list.append(42);
-    try std.testing.expectEqual(@as(i32, 42), list.pop());
+    std.debug.print("Score: {d}", .{result.*.score});
 }
