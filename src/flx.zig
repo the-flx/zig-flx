@@ -13,7 +13,12 @@ export fn score(str: c_string, query: c_string) Result {
     return c.flx_score(str, query);
 }
 
-test "test score (buffer-file-name, bfn)" {
+test "test (buffer-file-name, bfn)" {
     const result: Result = score("buffer-file-name", "bfn");
     try testing.expect(result.*.score == 237);
+}
+
+test "test (buffer-file-name, z)" {
+    const result: Result = score("buffer-file-name", "z");
+    try testing.expect(result == null);
 }
