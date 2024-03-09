@@ -3,7 +3,7 @@
     .version = "0.1.0",
 
     .paths = .{
-        "c-src",
+        "c-lib",
         "src",
         "build.zig",
         "build.zig.zon",
