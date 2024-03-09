@@ -14,6 +14,12 @@ pub fn build(b: *std.Build) void {
     lib.addIncludePath(.{ .path = "c-lib/flx-c/include/" });
     lib.addCSourceFile(.{
         .file = .{
+            .path = "src/stb_ds.c",  // single-file header
+        },
+        .flags = CFlags,
+    });
+    lib.addCSourceFile(.{
+        .file = .{
             .path = "c-lib/flx-c/src/flx.c",
         },
         .flags = CFlags,
@@ -28,6 +34,12 @@ pub fn build(b: *std.Build) void {
         .optimize = optimize,
     });
     main_tests.addIncludePath(.{ .path = "c-lib/flx-c/include/" });
+    main_tests.addCSourceFile(.{
+        .file = .{
+            .path = "src/stb_ds.c",  // single-file header
+        },
+        .flags = CFlags,
+    });
     main_tests.addCSourceFile(.{
         .file = .{
             .path = "c-lib/flx-c/src/flx.c",
