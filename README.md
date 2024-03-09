@@ -6,7 +6,7 @@
 
 ## ⚜️ License
 
-`flx-c` is distributed under the terms of the MIT license.
+`zig-flx` is distributed under the terms of the MIT license.
 
 See [LICENSE](./LICENSE) for details.
 
