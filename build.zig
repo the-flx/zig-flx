@@ -2,7 +2,15 @@ const std = @import("std");
 
 const CFlags = &.{};
 
+fn declare_module(b: *std.Build) void {
+    _ = b.addModule("flx", .{
+        .source_file = .{ .path = "src/flx.zig" },
+    });
+}
+
 pub fn build(b: *std.Build) void {
+    declare_module(b);
+
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
     const lib = b.addStaticLibrary(.{
