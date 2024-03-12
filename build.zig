@@ -2,7 +2,7 @@ const std = @import("std");
 
 const CFlags = &.{};
 
-fn declare_module(b: *std.Build) void {
+fn declareModule(b: *std.Build) void {
     const module = b.addModule("flx", .{
         .root_source_file = .{ .path = "src/flx.zig" },
     });
@@ -71,9 +71,18 @@ fn rest(b: *std.Build) void {
 
     const test_step = b.step("test", "Run library tests");
     test_step.dependOn(&run_main_tests.step);
+
+    //-- Doc
+    const docs_step = b.step("docs", "Emit docs");
+    const docs_install = b.addInstallDirectory(.{
+        .source_dir = lib.getEmittedDocs(),
+        .install_dir = .prefix,
+        .install_subdir = "docs", // location
+    });
+    docs_step.dependOn(&docs_install.step);
 }
 
 pub fn build(b: *std.Build) void {
-    declare_module(b);
+    declareModule(b);
     rest(b);
 }
