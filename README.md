@@ -25,11 +25,11 @@ pub fn main() !void {
 
 ```zig
 .dependencies = .{
-        .flx = .{
-            .url = "https://github.com/jcs090218/zig-flx/archive/9370accf3bb09a9e27a8c3a6ed7181cecc6679be.tar.gz",
-            .hash = "12205a4519fc774374102a05b52a460e4598019dc775d7fb535517171a45abad3a08",
-        },
+    .flx = .{
+        .url = "https://github.com/jcs090218/zig-flx/archive/9370accf3bb09a9e27a8c3a6ed7181cecc6679be.tar.gz",
+        .hash = "12205a4519fc774374102a05b52a460e4598019dc775d7fb535517171a45abad3a08",
     },
+},
 ```
 
 2. Add the dependency and module to your `build.zig`.
