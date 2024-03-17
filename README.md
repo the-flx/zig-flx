@@ -46,6 +46,8 @@ exe.addModule("flx", flx_mod);
 const flx = @import("flx");
 ```
 
+*📝 P.S. See [examples](https://github.com/jcs090218/zig-flx/tree/master/examples) for full example!*
+
 ## ⚜️ License
 
 `zig-flx` is distributed under the terms of the MIT license.
