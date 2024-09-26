@@ -1,11 +1,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Release](https://img.shields.io/github/tag/jcs090218/zig-flx.svg?label=release&logo=github)](https://github.com/jcs090218/zig-flx/releases/latest)
+[![Release](https://img.shields.io/github/tag/the-flx/zig-flx.svg?label=release&logo=github)](https://github.com/the-flx/zig-flx/releases/latest)
 
 # zig-flx
 > Zig bindings for flx-c
 
-[![Docs](https://github.com/jcs090218/zig-flx/actions/workflows/docs.yml/badge.svg)](https://github.com/jcs090218/zig-flx/actions/workflows/docs.yml)
-[![CI](https://github.com/jcs090218/zig-flx/actions/workflows/test.yml/badge.svg)](https://github.com/jcs090218/zig-flx/actions/workflows/test.yml)
+[![Docs](https://github.com/the-flx/zig-flx/actions/workflows/docs.yml/badge.svg)](https://github.com/the-flx/zig-flx/actions/workflows/docs.yml)
+[![CI](https://github.com/the-flx/zig-flx/actions/workflows/test.yml/badge.svg)](https://github.com/the-flx/zig-flx/actions/workflows/test.yml)
 
 ## 🔧 Usage
 
@@ -58,7 +58,3 @@ See [LICENSE](./LICENSE) for details.
 <!-- Links -->
 
 [flx]: https://github.com/lewang/flx
-[flx-rs]: https://github.com/jcs090218/flx-rs
-[FlxCs]: https://github.com/jcs090218/FlxCs
-[flx-ts]: https://github.com/jcs090218/flx-ts
-[flx-c]: https://github.com/jcs090218/flx-c
