@@ -26,7 +26,7 @@ pub fn main() !void {
 ```zig
 .dependencies = .{
     .flx = .{
-        .url = "https://github.com/jcs090218/zig-flx/archive/9370accf3bb09a9e27a8c3a6ed7181cecc6679be.tar.gz",
+        .url = "https://github.com/the-flx/zig-flx/archive/9370accf3bb09a9e27a8c3a6ed7181cecc6679be.tar.gz",
         .hash = "12205a4519fc774374102a05b52a460e4598019dc775d7fb535517171a45abad3a08",
     },
 },
@@ -46,7 +46,7 @@ exe.addModule("flx", flx_mod);
 const flx = @import("flx");
 ```
 
-*📝 P.S. See [examples](https://github.com/jcs090218/zig-flx/tree/master/examples) for full example!*
+*📝 P.S. See [examples](https://github.com/the-flx/zig-flx/tree/master/examples) for full example!*
 
 ## ⚜️ License
 
