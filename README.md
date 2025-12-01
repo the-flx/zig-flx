@@ -1,4 +1,5 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Zig Version](https://img.shields.io/badge/Zig-0.12.0+-F7A41D.svg?logo=zig)](https://ziglang.org/)
 [![Release](https://img.shields.io/github/tag/the-flx/zig-flx.svg?label=release&logo=github)](https://github.com/the-flx/zig-flx/releases/latest)
 
 # zig-flx
